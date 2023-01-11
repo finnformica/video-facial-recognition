@@ -24,7 +24,7 @@ def detect_expression():
 
     while True:
         frame = vs.read() # read video data
-        frame = imutils.resize(frame, width=400) # resive window
+        frame = imutils.resize(frame, width=600) # resive window
         frame = cv2.flip(frame, 1) # flip the frame horizontally
 
         # convert to greyscale for model
