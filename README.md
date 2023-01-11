@@ -43,4 +43,5 @@ python3 main.py
 
 ### Future features
 
-[] Change bounding box colour depending on expression
+- Change bounding box colour depending on expression
+- Implement Flask app to deploy to the browser
