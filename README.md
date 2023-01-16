@@ -1,3 +1,5 @@
+![Example GIF](/facial-recognition-vid.gif)
+
 # Live Video Facial Expression Detection
 
 Using `fast.ai`, an Image Classifier was trained with facial expression data from kaggle. The convnet architecture from `timm` was used to provide optimised training speed and model performance. Initial model accuracy was extremely poor and attempts at improving this by tuning the learning rate were semi-successfully, however, the issue was later realised to be caused by poorly labelled data. The model achieved a success rate of 70% although this poor accuracy did not affect its performance in the final application.
