@@ -4,6 +4,8 @@ import imutils
 import cv2
 import time
 
+colours = {'happy': (0, 200, 0), 'sad': (200, 0, 0), 'surprised': (0, 255, 200), 'disgusted': (200, 0, 200), 'fearful': (0, 165, 255), 'neutral': (255, 255, 255), 'angry': (0, 0, 200)}
+
 def stream_video(vs, learn, face_cascade):
     # stream video loop
     while True:
@@ -38,7 +40,7 @@ def stream_video(vs, learn, face_cascade):
                 frame,
                 (X_1, Y_1), 
                 (X_1 + text_w + padding * 2, Y_1 - text_h - padding * 2), 
-                (0, 255, 200), -1)
+                colours[pred], -1)
 
             # render prediction label
             cv2.putText(
@@ -48,7 +50,7 @@ def stream_video(vs, learn, face_cascade):
                 0.5, (0, 0, 0), 1)
             
             # render box around face
-            cv2.rectangle(frame, (X_1, Y_1), (X_2, Y_2), (0, 255, 200), 2)
+            cv2.rectangle(frame, (X_1, Y_1), (X_2, Y_2), colours[pred], 2)
 
         # display frame on window
         cv2.imshow("video stream", frame)
