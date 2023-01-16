@@ -42,15 +42,3 @@ python3 main.py
 
 - Detects seven facial expressions (neutral, happy, sad, disgust, fear, surprise, angry)
 - Frame skipping implemented to speed up video
-
-### Future features
-
-- Change bounding box colour depending on expression
-  - Happy (green)
-  - Sad (blue)
-  - Surprise (yellow)
-  - Disgust (purple)
-  - Fearful (orange)
-  - Neutral (white)
-  - Angry (red)
-- Implement Flask app to deploy to the browser
